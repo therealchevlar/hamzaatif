@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza Atif | Software Engineer</title>
+    <meta name="description" content="Hamza Atif — Computer & Information Systems Engineer at NED University. Full-stack developer & AI integration.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f8fafc;
+            --text: #0a192f;
+            --text-light: #4a5568;
+            --navy: #1e3a8a; 
+            --navy-dark: #172554;
+            --navy-light: #e0e7ff;
+            --accent: #d97706;
+            --border: #e2e8f0;
+            --card: #ffffff;
+            --shadow: 0 10px 40px rgba(30, 58, 138, 0.08);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--navy); }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--navy); }
+
+        .nav-cta {
+            background: var(--navy);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-cta:hover { background: var(--navy-dark); }
+
+        /* Hero Section - Centered Text Layout */
+        .hero {
+            padding: 180px 24px 120px;
+            background: linear-gradient(135deg, var(--navy-light) 0%, #ffffff 60%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative Background Elements */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(30, 58, 138, 0.1), transparent 70%);
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.08), transparent 70%);
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-greeting {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-name {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 5.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+
+        .hero-name span { color: var(--navy); }
+
+        .hero-desc {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 48px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 56px;
+        }
+
+        .btn {
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: white;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
+        }
+
+        .btn-outline {
+            background: white;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+
+        .btn-outline:hover { 
+            background: var(--navy-light);
+            transform: translateY(-2px);
+        }
+
+        .hero-social {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .hero-social a {
+            color: var(--navy);
+            font-size: 1.8rem;
+            transition: 0.3s;
+            opacity: 0.7;
+        }
+
+        .hero-social a:hover { 
+            color: var(--accent); 
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        /* Stats Badge */
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--navy);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
+
+        .section-header { margin-bottom: 60px; text-align: center; }
+
+        .section-label {
+            display: inline-block;
+            background: var(--navy-light);
+            color: var(--navy);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Cards */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .about-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .about-card:hover {
+            border-color: var(--navy);
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .about-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--navy-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 1.5rem;
+            color: var(--navy);
+        }
+
+        .about-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.3rem; margin-bottom: 16px; }
+        .about-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .skill-card-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--navy-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-size: 1.2rem;
+        }
+
+        .skill-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag {
+            background: var(--navy-light);
+            color: var(--navy-dark);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--navy);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.4s;
+        }
+
+        .project-card:hover::before { transform: scaleX(1); }
+        .project-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+        .project-icon { font-size: 2.5rem; color: var(--navy); margin-bottom: 20px; }
+        .project-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 16px; }
+        .project-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+        .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+        .project-tag {
+            background: var(--navy-light);
+            color: var(--navy);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .project-links { display: flex; gap: 16px; }
+        .project-links a {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .project-links a:hover { text-decoration: underline; }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: var(--navy);
+        }
+
+        .timeline-item {
+            position: relative;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 32px;
+            transition: 0.3s;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 32px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--navy);
+            border: 3px solid var(--bg);
+        }
+
+        .timeline-item:hover { border-color: var(--navy); box-shadow: var(--shadow); }
+        .timeline-date {
+            display: inline-block;
+            background: var(--navy-light);
+            color: var(--navy);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .timeline-item h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.3rem; margin-bottom: 8px; }
+        .timeline-company { color: var(--text-light); font-size: 0.9rem; font-weight: 500; margin-bottom: 12px; }
+        .timeline-item p { color: var(--text-light); font-size: 0.95rem; }
+
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .edu-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: 0.3s;
+        }
+
+        .edu-card:hover { border-color: var(--navy); box-shadow: var(--shadow); }
+        .edu-icon { font-size: 2rem; color: var(--navy); margin-bottom: 16px; }
+        .edu-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; margin-bottom: 8px; }
+        .edu-institution { color: var(--text-light); font-size: 0.9rem; margin-bottom: 12px; }
+        .edu-duration { color: var(--navy); font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
+        .edu-grade {
+            background: var(--navy-light);
+            padding: 8px 16px;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .cert-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: 0.3s;
+        }
+
+        .cert-card:hover { border-color: var(--navy); }
+        .cert-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--navy);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .cert-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; margin-bottom: 8px; }
+        .cert-code { color: var(--text-light); font-size: 0.85rem; margin-bottom: 8px; font-family: monospace; }
+        .cert-date { color: var(--navy); font-size: 0.85rem; font-weight: 600; }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-card:hover { border-color: var(--navy); transform: translateY(-5px); }
+        .service-icon { font-size: 2rem; color: var(--navy); margin-bottom: 16px; }
+        .service-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; margin-bottom: 12px; }
+        .service-card p { color: var(--text-light); font-size: 0.9rem; }
+
+        /* Contact */
+        .contact-section {
+            background: var(--navy-light);
+            padding: 100px 24px;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; margin-bottom: 32px; }
+        .contact-item { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+        .contact-item-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--navy-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-size: 1.2rem;
+        }
+        .contact-item a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; }
+        .contact-item a:hover { color: var(--navy); }
+        .contact-social { display: flex; gap: 16px; margin-top: 40px; }
+        .contact-social a {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--navy-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .contact-social a:hover { background: var(--navy); color: white; }
+        .contact-form h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; margin-bottom: 32px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; color: var(--text-light); font-size: 0.85rem; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: var(--navy-light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--navy);
+            outline: none;
+            background: white;
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        /* Footer */
+        .footer {
+            background: var(--text);
+            color: var(--text-light);
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .footer a { color: var(--navy-light); text-decoration: none; }
+        .footer a:hover { color: white; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-container {
+                padding: 0 16px;
+            }
+            .hero-name { font-size: 3.5rem; }
+            .hero-desc { font-size: 1.05rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-buttons .btn { width: 100%; justify-content: center; }
+            .hero-stats { flex-direction: column; gap: 24px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-container { grid-template-columns: 1fr; padding: 32px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">Hamza<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Let's Talk</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Clean, Text-Focused, Centered -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <h2 class="hero-greeting">Hi, I'm</h2>
+            <h1 class="hero-name">Hamza <span>Atif</span></h1>
+            <p class="hero-desc">
+                Computer & Information Systems Engineer at NED University. I build production-grade websites, AI-integrated applications, and seamless digital experiences for businesses and startups.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-arrow-down"></i> View Projects</a>
+                <a href="https://hamzaatifwebstudio.vercel.app" target="_blank" class="btn btn-outline"><i class="fas fa-globe"></i> Web Studio</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/therealchevlar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hamza-atif-b769b52ab/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:hamzaatif493@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <!-- Stats Row -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Roles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2027</div>
+                    <div class="stat-label">Grad Year</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- (Rest of the sections exactly as before) -->
+
+    <section class="section" id="about">
+        <div class="section-header">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title">Who I Am</h2>
+            <p class="section-desc">A dedicated engineer focused on delivering high-quality software solutions.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Education</h3>
+                <p>B.Eng. Computer & Information Systems Engineering at NED University (2023-2027). Intermediate with 86% from D.J. Sindh Govt. Science College.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Expertise</h3>
+                <p>Full-stack development, AI integration, database design, and production-grade web applications built for real clients.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon"><i class="fas fa-compass"></i></div>
+                <h3>Goal</h3>
+                <p>To deliver exceptional digital solutions as a software engineer, combining technical depth with a delivery-focused mindset.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <div class="section-header">
+            <span class="section-label">My Skills</span>
+            <h2 class="section-title">Tech Stack</h2>
+            <p class="section-desc">Technologies and tools I work with daily.</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming Languages</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Development</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">REST APIs</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Supabase</span>
+                    <span class="skill-tag">Database Design</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI / Data</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">LLM API</span>
+                    <span class="skill-tag">Prompt Engineering</span>
+                    <span class="skill-tag">Machine Learning</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-toolbox"></i></div>
+                    <h3>Tools</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">JIRA</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+                    <h3>Systems</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Operating Systems</span>
+                    <span class="skill-tag">Systems Programming</span>
+                    <span class="skill-tag">Data Structures</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <div class="section-header">
+            <span class="section-label">My Work</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-desc">Production projects and academic work I've built.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Conceptual Learning Southampton</h3>
+                <p>Premium tutoring platform for GCSE/A-Level with AI tutor widget powered by Anthropic API. Next.js + Supabase rebuild.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Next.js</span>
+                    <span class="project-tag">Supabase</span>
+                    <span class="project-tag">AI</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/therealchevlar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-book"></i></div>
+                <h3>BookOcean</h3>
+                <p>Bookstore platform with inventory management, admin dashboard, cart workflows, and barcode scanning integration.</p>
+                <div class="project-tags">
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">SQL</span>
+                    <span class="project-tag">Admin Dashboard</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/therealchevlar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-brain"></i></div>
+                <h3>Attention Span Prediction</h3>
+                <p>Machine learning project predicting short-video attention using Logistic Regression, Decision Trees, and Neural Networks.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">ML</span>
+                    <span class="project-tag">Scikit-learn</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/therealchevlar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-cogs"></i></div>
+                <h3>LRU Cache Implementation</h3>
+                <p>Cache-replacement system applying data structure and systems programming concepts in C++.</p>
+                <div class="project-tags">
+                    <span class="project-tag">C++</span>
+                    <span class="project-tag">Data Structures</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/therealchevlar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-chess-queen"></i></div>
+                <h3>8-Queens Solver</h3>
+                <p>AI search-based solution to the classic 8-Queens problem in Python.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">AI</span>
+                    <span class="project-tag">Algorithms</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/therealchevlar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                <h3>Online Shopping Cart</h3>
+                <p>Shopping-cart application with complete transaction logic in Python.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">OOP</span>
+                    <span class="project-tag">Backend</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/therealchevlar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="experience">
+        <div class="section-header">
+            <span class="section-label">Experience</span>
+            <h2 class="section-title">Professional Journey</h2>
+            <p class="section-desc">My professional experience and internships.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2026 – Present</div>
+                <h3>Freelance Web Developer</h3>
+                <div class="timeline-company">Self-Employed</div>
+                <p>Design and build production websites and web applications end-to-end for businesses, startups, and personal brands.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">Jun 2026 – Aug 2026</div>
+                <h3>Computer System Analyst Intern</h3>
+                <div class="timeline-company">Karachi Development Authority (KDA)</div>
+                <p>Analyzed organizational data and supported hardware-system optimization initiatives within a government organization.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 2024 – Jan 2025</div>
+                <h3>IT Assistant Intern</h3>
+                <div class="timeline-company">SINA Health Systems Foundation</div>
+                <p>Worked with software systems, database management, and hardware infrastructure in a healthcare-technology environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="education">
+        <div class="section-header">
+            <span class="section-label">Education</span>
+            <h2 class="section-title">Academic Background</h2>
+            <p class="section-desc">My formal education and qualifications.</p>
+        </div>
+
+        <div class="education-grid">
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fas fa-university"></i></div>
+                <h3>Bachelor of Engineering</h3>
+                <div class="edu-institution">NED University, Karachi</div>
+                <div class="edu-duration">2023 – 2027</div>
+                <div class="edu-grade">Computer & Information Systems Engineering</div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fas fa-school"></i></div>
+                <h3>Intermediate (Pre-Engineering)</h3>
+                <div class="edu-institution">D.J. Sindh Govt. Science College</div>
+                <div class="edu-duration">2021 – 2023</div>
+                <div class="edu-grade">Grade: 86%</div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fas fa-book-open"></i></div>
+                <h3>Matriculation</h3>
+                <div class="edu-institution">SKBZ Campus, DHA School</div>
+                <div class="edu-duration">2021</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="certifications">
+        <div class="section-header">
+            <span class="section-label">Certifications</span>
+            <h2 class="section-title">Achievements</h2>
+            <p class="section-desc">Professional certifications and recognitions.</p>
+        </div>
+
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                <h3>Introduction to Generative AI</h3>
+                <div class="cert-code">Certificate Code: 10658806</div>
+                <div class="cert-date">August 2026</div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fab fa-github-alt"></i></div>
+                <h3>Prompt Engineering with GitHub Copilot</h3>
+                <div class="cert-code">Certificate Code: 10658952</div>
+                <div class="cert-date">August 2026</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 24px; background: var(--navy-light); border-radius: 16px; display: flex; align-items: center; gap: 16px;">
+            <i class="fas fa-medal" style="font-size: 2rem; color: var(--navy);"></i>
+            <div>
+                <strong>Youth Ambassador</strong>
+                <div style="color: var(--text-light); font-size: 0.9rem;">Indus Hospital "Voice Against Smoking" — public-health awareness campaigns across Karachi</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="section-header">
+            <span class="section-label">Services</span>
+            <h2 class="section-title">What I Can Help With</h2>
+            <p class="section-desc">Services based on my real skills and experience.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-code"></i></div>
+                <h3>Full-Stack Development</h3>
+                <p>Production websites, e-commerce, and custom web applications built end-to-end.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Frontend Engineering</h3>
+                <p>Responsive interfaces, SPAs, and modern UI with JavaScript, Next.js, and CSS.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Integration</h3>
+                <p>LLM API integration, AI widgets, and prompt engineering for web apps.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <h3>Database Design</h3>
+                <p>SQL, MySQL, Supabase — database architecture, management, and optimization.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Technical Consulting</h3>
+                <p>Advice on tech stack, architecture, and strategy for startups and businesses.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title">Let's Build Something Great</h2>
+            <p class="section-desc">Have a project in mind? Let's talk about how I can help.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                    <a href="mailto:hamzaatif493@gmail.com">hamzaatif493@gmail.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+                    <a href="https://github.com/therealchevlar" target="_blank">github.com/therealchevlar</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
+                    <a href="https://www.linkedin.com/in/hamza-atif-b769b52ab/" target="_blank">linkedin.com/in/hamza-atif</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fas fa-briefcase"></i></div>
+                    <a href="https://hamzaatifwebstudio.vercel.app" target="_blank">hamzaatifwebstudio.vercel.app</a>
+                </div>
+
+                <div class="contact-social">
+                    <a href="https://github.com/therealchevlar" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hamza-atif-b769b52ab/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:hamzaatif493@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://hamzaatifwebstudio.vercel.app" target="_blank"><i class="fas fa-briefcase"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="What's this about?">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Hamza Atif. Built with <i class="fas fa-heart" style="color: #d97706;"></i> in Karachi, Pakistan</p>
+        <p style="margin-top: 8px; font-size: 0.8rem;">
+            <a href="https://github.com/therealchevlar" target="_blank">GitHub</a> · 
+            <a href="https://www.linkedin.com/in/hamza-atif-b769b52ab/" target="_blank">LinkedIn</a> · 
+            <a href="https://hamzaatifwebstudio.vercel.app" target="_blank">Web Studio</a>
+        </p>
+    </footer>
+
+    <script>
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent! I\'ll get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
